@@ -1,7 +1,11 @@
 package u.can.i.up.app;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +29,7 @@ public class MainActivity extends ActionBarActivity {
 //        Log.i("TEST_INT", "" + testInt());
 //        Log.i("SEND_SMS", "" + sendSMS());
         Log.i("TEST_LOC", "" + getLocation());
+        getMyLocation();
     }
 
 
@@ -42,5 +47,13 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         return id == R.id.action_settings || super.onOptionsItemSelected(item);
+    }
+
+    private void getMyLocation(){
+        LocationManager manager = (LocationManager) getApplication().getBaseContext().getSystemService(Context.LOCATION_SERVICE);
+        Location location = null;
+        location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        Log.i("经度", "" + location.getLongitude());
+        Log.i("纬度", "" + location.getLatitude());
     }
 }
