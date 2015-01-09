@@ -1,0 +1,37 @@
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        minSdkVersion 1
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+//    buildTypes {
+//        release {
+//            runProguard false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+//            ndk {
+//                moduleName "myjni"
+//                abiFilters "armeabi", "armeabi-v7a", "x86"
+//            }
+//        }
+//        debug {
+//            ndk {
+//                moduleName "myjni"
+//                //stl "stlport_shared"
+//                ldLibs "log", "z", "m"
+//                //cFlags "-Wall -Wextra -I " + projectDir + "/src/main/jni/include"
+//                abiFilters "armeabi", "armeabi-v7a", "x86"
+//            }
+//        }
+//
+//    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

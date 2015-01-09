@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk1.7.0_45\bin\javah.exe" -classpath DataAppExtractor/src/main/java -d myjni/src/main/jni com.softsec.isc.dataappextractor.MainActivity
