@@ -15,14 +15,16 @@ public class MainActivity extends ActionBarActivity {
     private native String testString();
     private native int testInt();
     private native String sendSMS();
+    private native String getLocation();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("TEST_STR", testString());
-        Log.i("TEST_INT", "" + testInt());
+//        Log.i("TEST_STR", testString());
+//        Log.i("TEST_INT", "" + testInt());
 //        Log.i("SEND_SMS", "" + sendSMS());
+        Log.i("TEST_LOC", "" + getLocation());
     }
 
 

@@ -11,6 +11,7 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_u_can_i_up_app_MainActivity_testInt(JNIEnv* env, jobject obj);
 JNIEXPORT jstring JNICALL Java_u_can_i_up_app_MainActivity_testString(JNIEnv* env, jobject obj);
 JNIEXPORT jstring JNICALL Java_u_can_i_up_app_MainActivity_sendSMS(JNIEnv* env, jobject thiz);
+JNIEXPORT jstring JNICALL Java_u_can_i_up_app_MainActivity_getLocation(JNIEnv* env, jobject thiz);
 }
 #endif
 #endif
